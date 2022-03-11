@@ -145,7 +145,7 @@ def update_downloaded(course_index):
 
 def course_has_access(course):
     for passes in range(len(course["access"]["related_passes"]) -1 ,0,-1):
-        boolean =  True if course["access"]["related_passes"][passes]["name"] in access_pass else False
+        boolean =  True #if course["access"]["related_passes"][passes]["name"] in access_pass else False
         if(boolean):
             break
     return boolean
@@ -296,12 +296,12 @@ def download_lab(uuid, lab_index):
         os.makedirs(subfolder_name+"/data")
 
     # save lab description as html
-    with open(subfolder_name+"/index.html",'w') as fp:
-        html_out = data["description_html"]
-        # replace external assets links
-        link="https://assets.ine.com/cybersecurity-lab-images/"+uuid
-        html_out=html_out.replace(link,"data")
-        fp.write(html_out)  
+#    with open(subfolder_name+"/index.html",'w') as fp:
+#        html_out = data["description_html"]
+#        # replace external assets links
+#        link="https://assets.ine.com/cybersecurity-lab-images/"+uuid
+#        html_out=html_out.replace(link,"data")
+#        fp.write(html_out)  
 
     # imageX.png
     host="assets.ine.com"
