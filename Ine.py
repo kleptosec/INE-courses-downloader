@@ -145,7 +145,7 @@ def update_downloaded(course_index):
 
 def course_has_access(course):
     for passes in range(len(course["access"]["related_passes"]) -1 ,0,-1):
-        boolean =  True if course["access"]["related_passes"][passes]["name"] in access_pass else False
+        boolean =  True #if course["access"]["related_passes"][passes]["name"] in access_pass else False
         if(boolean):
             break
     return boolean
